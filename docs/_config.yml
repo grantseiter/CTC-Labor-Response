@@ -1,0 +1,16 @@
+# Book settings
+
+title: CTC-Labor-Response
+author: Grant M. Seiter
+copyright : "2021"
+logo: aei_logo.png
+
+repository:
+  url: https://github.com/grantseiter/CTC-Labor-Response
+  path_to_book: docs
+  branch: main
+
+html:
+  use_edit_page_button: false
+  use_issues_button: false
+  use_repository_button: true
