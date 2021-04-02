@@ -1,4 +1,4 @@
-# CTC-Labor-Response
+# Model Introduction
 
 **Estimating the Labor Supply Response to a Permanent Child Tax Credit Expansion**
 
