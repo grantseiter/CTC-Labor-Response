@@ -52,8 +52,6 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="CTC-Labor-Response" href="intro.html" />
@@ -184,8 +182,8 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#estimating-arpa-s-distributional-effects">
-   Estimating ARPA’s Distributional Effects
+  <a class="reference internal nav-link" href="#estimating-marginal-and-average-tax-rates">
+   Estimating Marginal and Average Tax Rates
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -212,25 +210,26 @@
                 
   <div class="section" id="technical-description">
 <h1>Technical Description<a class="headerlink" href="#technical-description" title="Permalink to this headline">¶</a></h1>
-<p>In choosing whether to enter or leave the workforce or how many hours to work, individuals respond to incentives that are partly determined by the tax code. Taxes can influence an individual’s willingness to work through the “substitution effect” and the “income effect.” The substitution effect occurs when an increase in the after-tax wage rate – due to a tax cut that reduces marginal tax rates – increases the attractiveness of work relative to leisure. The income effect occurs when an increase in after-tax income, such as from a tax cut that reduces average tax rates, increases an individual’s ability to consume more.</p>
-<p>The marginal tax rate is the ratio of additional tax paid on additional income, and it measures the degree to which taxes affect incentives. The average tax rate is the total tax paid divided by total income. Average tax rates measure how taxes affect an individual’s ability to consume.</p>
-<p>The child tax credit (CTC) influences effective marginal tax rates (EMTRs) through phase-ins and phaseouts of benefits. The phase-in for low-income households increases both the incentive to enter the labor force and increase hours worked. The phaseout for low- and middle-income households reduces the incentive to work additional hours.</p>
+<p>Taxes can impact an individual’s willingness to enter the labor force and how many hours they choose to work through the “substitution effect” and the “income effect.”</p>
+<p>The substitution effect impacts work by influencing the attractiveness of work relative to leisure. The relative attractiveness of work and leisure is influenced by marginal effective tax rates. The marginal tax rate is the ratio of additional tax paid on additional income earned.</p>
+<p>The income effect influences a household’s ability to consume goods and services, including leisure. The income effect is influenced by the after-tax income of an individual and is determined by the average tax rate. The average tax rate is the total tax paid divided by total income.</p>
+<p>The child tax credit (CTC) impacts both effective marginal tax rates and average tax rates. The CTC both increases and decreases marginal tax rates through phase-ins and phaseouts of benefits. The CTC decreases after-tax rates and increases after-tax income by providing additional resources to households with children.</p>
 <p>The American Rescue Plan Act <a class="reference external" href="https://www.congress.gov/bill/117th-congress/house-bill/1319/text">(ARPA)</a> temporarily expanded the child tax credit (CTC) for 2021 by allowing households to claim up to $3,600 for each child under age six and $3,000 for each child age six to seventeen. The credit was also made fully refundable and advanceable.</p>
-<p>We first estimate the effect of the tax policy change using <a class="reference external" href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a>, an open-source microsimulation model of the federal individual income and payroll tax. Then, we estimate labor supply changes using a modified <a class="reference external" href="https://www.cbo.gov/publication/43674">method</a> employed by the Congressional Budget Office (CBO).</p>
-<div class="section" id="estimating-arpa-s-distributional-effects">
-<h2>Estimating ARPA’s Distributional Effects<a class="headerlink" href="#estimating-arpa-s-distributional-effects" title="Permalink to this headline">¶</a></h2>
+<p>We first estimated the effect of the tax policy change using <a class="reference external" href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a>, an open-source microsimulation model of the federal individual income and payroll tax. Then, we estimated labor supply changes using a <a class="reference external" href="https://www.cbo.gov/publication/43674">method</a> similar to the one employed by the Congressional Budget Office (CBO).</p>
+<div class="section" id="estimating-marginal-and-average-tax-rates">
+<h2>Estimating Marginal and Average Tax Rates<a class="headerlink" href="#estimating-marginal-and-average-tax-rates" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The following estimates are derived from Tax-Calculator 3.1.0 with custom modifications to model the American Rescue Plan Act (H.R. 1319). Baseline is the law currently in place as of March 10, 2021, and the American Rescue Plan Act’s CTC reform is assumed effective January 1, 2021.</p>
 </div>
-<p>Using a representative sample of tax filing units from the IRS-SOI PUF, we estimate total filers, total labor earnings, the effective marginal tax rate on labor income (including both the income and payroll tax), and the average effective tax rate (AETR) on all income (including both the income and payroll tax) for each income decile.</p>
+<p>Using a representative sample of tax filing units from the IRS-SOI PUF, we estimate share of total labor earnings, the effective marginal tax rate on labor income (including both the income and payroll tax), and the average effective tax rate (AETR) on all income (including both the income and payroll tax) for each income decile.</p>
 <p>The microsimulation estimates are shown in the tables, below.</p>
 <p><strong>Table 1. Distributional Estimates of Selected Parameters (Baseline)</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Expanded Income Decile</p></th>
 <th class="head"><p>Total Filers (millions)</p></th>
-<th class="head"><p>Labor Earnings (billions)</p></th>
+<th class="head"><p>Share of Labor Earnings (%)</p></th>
 <th class="head"><p>EMTR on Labor Income (%)</p></th>
 <th class="head"><p>AETR on All Income (%)</p></th>
 </tr>
@@ -238,61 +237,61 @@
 <tbody>
 <tr class="row-even"><td><p>0-10</p></td>
 <td><p>13.14</p></td>
-<td><p>23.94</p></td>
+<td><p>0.3%</p></td>
 <td><p>6.7%</p></td>
 <td><p>5.5%</p></td>
 </tr>
 <tr class="row-odd"><td><p>10-20</p></td>
 <td><p>17.98</p></td>
-<td><p>93.03</p></td>
+<td><p>1.1%</p></td>
 <td><p>4.5%</p></td>
 <td><p>0.0%</p></td>
 </tr>
 <tr class="row-even"><td><p>20-30</p></td>
 <td><p>17.98</p></td>
-<td><p>158.50</p></td>
+<td><p>1.9%</p></td>
 <td><p>9.6%</p></td>
 <td><p>-0.6%</p></td>
 </tr>
 <tr class="row-odd"><td><p>30-40</p></td>
 <td><p>17.98</p></td>
-<td><p>245.74</p></td>
+<td><p>2.9%</p></td>
 <td><p>14.9%</p></td>
 <td><p>4.3%</p></td>
 </tr>
 <tr class="row-even"><td><p>40-50</p></td>
 <td><p>17.98</p></td>
-<td><p>364.24</p></td>
+<td><p>4.3%</p></td>
 <td><p>18.7%</p></td>
 <td><p>9.0%</p></td>
 </tr>
 <tr class="row-odd"><td><p>50-60</p></td>
 <td><p>17.98</p></td>
-<td><p>495.48</p></td>
+<td><p>5.9%</p></td>
 <td><p>20.1%</p></td>
 <td><p>12.8%</p></td>
 </tr>
 <tr class="row-even"><td><p>60-70</p></td>
 <td><p>17.98</p></td>
-<td><p>680.98</p></td>
+<td><p>8.0%</p></td>
 <td><p>22.5%</p></td>
 <td><p>16.6%</p></td>
 </tr>
 <tr class="row-odd"><td><p>70-80</p></td>
 <td><p>17.98</p></td>
-<td><p>987.57</p></td>
+<td><p>11.7%</p></td>
 <td><p>23.9%</p></td>
 <td><p>20.4%</p></td>
 </tr>
 <tr class="row-even"><td><p>80-90</p></td>
 <td><p>17.98</p></td>
-<td><p>1,589.31</p></td>
+<td><p>18.8%</p></td>
 <td><p>27.2%</p></td>
 <td><p>24.3%</p></td>
 </tr>
 <tr class="row-odd"><td><p>90-100</p></td>
 <td><p>17.98</p></td>
-<td><p>3,801.87</p></td>
+<td><p>44.9%</p></td>
 <td><p>29.0%</p></td>
 <td><p>31.9%</p></td>
 </tr>
@@ -309,7 +308,7 @@
 <thead>
 <tr class="row-odd"><th class="head"><p>Expanded Income Decile</p></th>
 <th class="head"><p>Total Filers (millions)</p></th>
-<th class="head"><p>Labor Earnings (billions)</p></th>
+<th class="head"><p>Share of Labor Earnings (%)</p></th>
 <th class="head"><p>EMTR on Labor Income (%)</p></th>
 <th class="head"><p>AETR on All Income (%)</p></th>
 </tr>
@@ -317,61 +316,61 @@
 <tbody>
 <tr class="row-even"><td><p>0-10</p></td>
 <td><p>13.14</p></td>
-<td><p>23.94</p></td>
+<td><p>0.3%</p></td>
 <td><p>7.2%</p></td>
 <td><p>-6.5%</p></td>
 </tr>
 <tr class="row-odd"><td><p>10-20</p></td>
 <td><p>17.98</p></td>
-<td><p>93.03</p></td>
+<td><p>1.1%</p></td>
 <td><p>6.2%</p></td>
 <td><p>-5.9%</p></td>
 </tr>
 <tr class="row-even"><td><p>20-30</p></td>
 <td><p>17.98</p></td>
-<td><p>158.50</p></td>
+<td><p>1.9%</p></td>
 <td><p>11.4%</p></td>
 <td><p>-5.6%</p></td>
 </tr>
 <tr class="row-odd"><td><p>30-40</p></td>
 <td><p>17.98</p></td>
-<td><p>245.74</p></td>
+<td><p>2.9%</p></td>
 <td><p>16.9%</p></td>
 <td><p>1.2%</p></td>
 </tr>
 <tr class="row-even"><td><p>40-50</p></td>
 <td><p>17.98</p></td>
-<td><p>364.24</p></td>
+<td><p>4.3%</p></td>
 <td><p>19.9%</p></td>
 <td><p>7.1%</p></td>
 </tr>
 <tr class="row-odd"><td><p>50-60</p></td>
 <td><p>17.98</p></td>
-<td><p>495.48</p></td>
+<td><p>5.9%</p></td>
 <td><p>20.4%</p></td>
 <td><p>11.5%</p></td>
 </tr>
 <tr class="row-even"><td><p>60-70</p></td>
 <td><p>17.98</p></td>
-<td><p>680.98</p></td>
+<td><p>8.0%</p></td>
 <td><p>22.6%</p></td>
 <td><p>15.7%</p></td>
 </tr>
 <tr class="row-odd"><td><p>70-80</p></td>
 <td><p>17.98</p></td>
-<td><p>987.57</p></td>
+<td><p>11.7%</p></td>
 <td><p>23.9%</p></td>
 <td><p>19.6%</p></td>
 </tr>
 <tr class="row-even"><td><p>80-90</p></td>
 <td><p>17.98</p></td>
-<td><p>1,589.31</p></td>
+<td><p>18.8%</p></td>
 <td><p>27.3%</p></td>
 <td><p>23.6%</p></td>
 </tr>
 <tr class="row-odd"><td><p>90-100</p></td>
 <td><p>17.98</p></td>
-<td><p>3,801.87</p></td>
+<td><p>44.9%</p></td>
 <td><p>29.5%</p></td>
 <td><p>31.8%</p></td>
 </tr>
@@ -386,7 +385,8 @@
 </div>
 <div class="section" id="estimating-the-labor-supply-response">
 <h2>Estimating the Labor Supply Response<a class="headerlink" href="#estimating-the-labor-supply-response" title="Permalink to this headline">¶</a></h2>
-<p>To estimate how much the labor supply would change in response to a permanent expansion of the American Rescue Plan’s CTC we use a modified method employed by the Congressional Budget Office (CBO). This method starts with the average and marginal tax rate changes for each income decile from our microsimulation model and calculates the long-term labor supply response based on estimates of substitution and income elasticities. For more details on CBO’s model, see <a class="reference external" href="https://www.cbo.gov/publication/43674">this</a> report. We then compute the earnings-weighted average percent change in labor supply across all workers and estimate the total change in hours worked. Using <a class="reference external" href="https://www.bls.gov/news.release/empsit.t19.htm">current U.S. average hourly earnings</a> (for all employees on private nonfarm payrolls, seasonally adjusted – Feb 2021) and <a class="reference external" href="https://www.cbo.gov/system/files/2021-02/51135-2021-02-economicprojections.xlsx">total U.S. 2021 wages and salaries</a> (from CBO’s 10-Year Economic Projections – Feb 2021), we convert that estimate into full-time equivalent jobs lost/gained.</p>
+<p>To estimate how much the labor supply would change in response to a permanent expansion of the American Rescue Plan’s CTC we use a method similar to the one employed by the Congressional Budget Office (CBO). This method starts with the average and marginal tax rate changes for each income decile from our microsimulation model and calculates the long-term labor supply response based on estimates of substitution and income elasticities for each income decile. We then compute the earnings-weighted average percent change in labor supply across all households and estimate the total change in hours worked.</p>
+<p>Then, using <a class="reference external" href="https://www.bls.gov/news.release/empsit.t19.htm">current U.S. average hourly earnings</a> (for all employees on private nonfarm payrolls, seasonally adjusted – Feb 2021) and <a class="reference external" href="https://www.cbo.gov/system/files/2021-02/51135-2021-02-economicprojections.xlsx">total U.S. 2021 wages and salaries</a> (from CBO’s 10-Year Economic Projections – Feb 2021), we convert the earnings-weighted average percent change in hours worked into full-time equivalent jobs lost/gained.</p>
 <p>CBO uses a range of substitution and income elasticities (lower, central, and higher estimates) that vary by earnings level (as shown in Tables 3 and 4 below). For a detailed discussion of how CBO determined its range of elasticity estimates, see Robert McClelland and Shannon Mok, <a class="reference external" href="https://www.cbo.gov/publication/43675"><em>A Review of Recent Research on Labor Supply Elasticities</em></a>, CBO Working Paper 2012-12 (October 2012).</p>
 <p><strong>Table 3. Substitution Elasticities</strong></p>
 <table class="colwidths-auto table">
@@ -472,18 +472,10 @@
 </tr>
 </tbody>
 </table>
-<p>Substitution and income elasticities are measured with respect to after-tax wage rates. The after-tax wage rate represents the percentage of earnings a worker receives after taxes, <span class="math notranslate nohighlight">\(W = (1-t)\)</span>, where <span class="math notranslate nohighlight">\(W\)</span> is the after-tax wage rate and <span class="math notranslate nohighlight">\(t\)</span> is the tax rate. When <span class="math notranslate nohighlight">\(t\)</span> is the marginal effective tax rate, <span class="math notranslate nohighlight">\(W\)</span> is the after-tax marginal wage rate, <span class="math notranslate nohighlight">\(W_{M}\)</span>, and when <span class="math notranslate nohighlight">\(t\)</span> is the average effective tax rate, <span class="math notranslate nohighlight">\(W\)</span> is the after-tax average wage rate, <span class="math notranslate nohighlight">\(W_{A}\)</span>.</p>
-<p>The percentage change in the after-tax marginal wage rate and after-tax average wage rate, <span class="math notranslate nohighlight">\(\Delta W_{M,A} = \left(\frac{W_{reform}}{W_{base}}\right)\)</span>, can be multiplied by the substitution and income elasticities, respectively, to estimate each effect’s percentage change in the labor supply. <span class="math notranslate nohighlight">\( L_{M} = (\Delta W_{M} * \epsilon) \)</span> is the labor supply response resulting from the substitution effect and <span class="math notranslate nohighlight">\( L_{A} = (\Delta W_{A} * \eta)\)</span> is the labor supply response resulting from the income effect, where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the substitution elasticity and <span class="math notranslate nohighlight">\(\eta\)</span> is the income elasticity.</p>
-<p>The earnings-weighted average percent change in labor supply across all workers, <span class="math notranslate nohighlight">\( L^* \)</span>, is</p>
-<p><span class="math notranslate nohighlight">\(L^* = \displaystyle\frac{\sum\limits_{i=1}^{10} w_{i} L_{M_i}}{\sum\limits_{i=1}^{10} w_i} + \frac{\sum\limits_{i=1}^{10} w_{i} L_{A_i}}{\sum\limits_{i=1}^{10} w_i}\)</span> ,</p>
-<p>where <span class="math notranslate nohighlight">\(w_i\)</span> is total labor income for each income decile <span class="math notranslate nohighlight">\(i\)</span>.</p>
-<p>Total full-time equivalent jobs lost or gained, <span class="math notranslate nohighlight">\(J\)</span>, is</p>
-<p><span class="math notranslate nohighlight">\(J = \displaystyle\frac{L^* * \left(\frac{C}{E}\right)}{A}\)</span>,</p>
-<p>where <span class="math notranslate nohighlight">\(C\)</span> is total U.S. wages and salaries, <span class="math notranslate nohighlight">\(E\)</span> is current average U.S. hourly earnings, and <span class="math notranslate nohighlight">\(A\)</span> is average annual full-time hours for a single employee.</p>
 </div>
 <div class="section" id="summary-of-results">
 <h2>Summary of Results<a class="headerlink" href="#summary-of-results" title="Permalink to this headline">¶</a></h2>
-<p>According to our calculation, using the above methodology, the likely impact of a permanent expansion of the American Rescue Plan’s CTC on employment will be 296,000 full-time equivalent jobs lost (+/- 155,000).</p>
+<p>Using the above methodology, we found that the likely impact of a permanent expansion of the American Rescue Plan’s CTC on employment will be 296,000 full-time equivalent jobs lost (+/- 155,000).</p>
 <p><strong>Table 5. Full Time Equivalent Jobs (Thousands)</strong></p>
 <table class="colwidths-auto table">
 <thead>
