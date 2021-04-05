@@ -63,7 +63,7 @@ To estimate how much the labor supply would change in response to a permanent ex
 
 Then, using [current U.S. average hourly earnings](https://www.bls.gov/news.release/empsit.t19.htm) (for all employees on private nonfarm payrolls, seasonally adjusted -- Feb 2021) and [total U.S. 2021 wages and salaries](https://www.cbo.gov/system/files/2021-02/51135-2021-02-economicprojections.xlsx) (from CBO's 10-Year Economic Projections -- Feb 2021), we convert the earnings-weighted average percent change in hours worked into full-time equivalent jobs lost/gained. 
 
-CBO uses a range of substitution and income elasticities (lower, central, and higher estimates) that vary by earnings level (as shown in Tables 3 and 4 below). For a detailed discussion of how CBO determined its range of elasticity estimates, see Robert McClelland and Shannon Mok, [*A Review of Recent Research on Labor Supply Elasticities*](https://www.cbo.gov/publication/43675), CBO Working Paper 2012-12 (October 2012).
+[CBO (2012)](https://www.cbo.gov/sites/default/files/112th-congress-2011-2012/reports/43674-laborsupplyfiscalpolicy.pdf) uses a range of substitution elasticities (that vary by earnings level) and income elasticities as shown in Tables 3 and 4 below. For a detailed discussion of how CBO determined its range of elasticity estimates, see Robert McClelland and Shannon Mok, [*A Review of Recent Research on Labor Supply Elasticities*](https://www.cbo.gov/publication/43675), CBO Working Paper 2012-12 (October 2012).
 
 **Table 3. Substitution Elasticities**
 | **Income Decile**                                            | **Lower Estimate**| **Central Estimate** | **Higher Estimate** |
@@ -88,7 +88,7 @@ CBO uses a range of substitution and income elasticities (lower, central, and hi
 
 ## Summary of Results
 
-Using the above methodology, we found that the likely impact of a permanent expansion of the American Rescue Plan’s CTC on employment will be 296,000 full-time equivalent jobs lost (+/- 155,000).
+Using the above methodology, we found that the likely impact of a permanent expansion of the American Rescue Plan’s CTC on employment will be -296,000 full-time equivalent jobs (+/- 155,000).
 
 **Table 5. Full Time Equivalent Jobs (Thousands)**
 |                                       | **Lower Estimate** | **Central Estimate** | **Higher Estimate** |
